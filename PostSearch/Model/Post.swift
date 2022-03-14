@@ -7,16 +7,40 @@
 
 import Foundation
 
-struct Post : Codable {
+
+struct Post {
     
-    let id : Int
-    let userId : Int
-    let title : String
-    let body: String
+    let meta : Meta
     
-    enum CodingKeys: String, CodingKey {
-        case id
-        case userId = "user_id"
-        case title, body
+    let data : [DataPost]
+    
+    struct Meta {
+        let pagination : Pagination
+    }
+    struct Pagination {
+        let total, pages, page, limit: Int
+        let links: Links?
+    }
+    struct Links {
+        let current, next: String
+    }
+    
+}
+
+extension Post {
+    
+    struct DataPost {
+        
+        let id : Int
+        let user_id : Int
+        let title : String
+        let body : String
+        
+        init(response: PostResponse.DataResponse?){
+            self.id = response?.id ?? 0
+            self.user_id = response?.user_id ?? 0
+            self.title = response?.title ?? ""
+            self.body = response?.body ?? ""
+        }
     }
 }
