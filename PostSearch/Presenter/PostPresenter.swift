@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import ProgressHUD
 
 struct PostPresenter {
     
@@ -19,8 +20,10 @@ struct PostPresenter {
     
     private func listAll() {
         
+        ProgressHUD.show("Cargando")
         self.postFetch.listAllwWithAlamofire { arrayPostsResponse in
             self.controller.reloadData(arrayPostsResponse.data ?? [])
+            ProgressHUD.dismiss()
         }
     }
     

@@ -8,6 +8,6 @@ target 'PostSearch' do
   # Pods for PostSearch
 
 pod 'ProgressHUD'
-
+pod 'JGProgressHUD'
 
 end
