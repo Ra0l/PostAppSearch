@@ -11,16 +11,8 @@ class PostViewController: UIViewController {
     
     
     @IBOutlet weak private var tlbPosts: UITableView!
-    
-    
-    lazy private var adapter : PostAdapter = {
-        PostAdapter(controller: self)
-    }()
-    
-    lazy private var presenter : PostPresenter = {
-        PostPresenter(controller: self)
-    }()
-    
+    lazy private var adapter : PostAdapter = { PostAdapter(controller: self) }()
+    lazy private var presenter : PostPresenter = { PostPresenter(controller: self) }()
     private var arrayPosts = [PostResponse.DataResponse]()
     
 }
@@ -31,7 +23,7 @@ extension PostViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.presenter.listAll()
+        self.presenter.didLoad()
     }
     
 }

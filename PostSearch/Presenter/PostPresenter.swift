@@ -17,10 +17,16 @@ struct PostPresenter {
     }
     
     
-    func listAll() {
+    private func listAll() {
         
         self.postFetch.listAllwWithAlamofire { arrayPostsResponse in
             self.controller.reloadData(arrayPostsResponse.data ?? [])
         }
+    }
+    
+    func didLoad() {
+        
+        self.controller.initAdapter()
+        self.listAll()
     }
 }

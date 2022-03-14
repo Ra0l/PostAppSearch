@@ -1,0 +1,6 @@
+framework module Pods_PostSearch {
+  umbrella header "Pods-PostSearch-umbrella.h"
+
+  export *
+  module * { export * }
+}

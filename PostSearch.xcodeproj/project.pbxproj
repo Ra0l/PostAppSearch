@@ -21,9 +21,14 @@
 		A55DCA9A27DF9A15002374A6 /* Data+DTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55DCA9927DF9A15002374A6 /* Data+DTO.swift */; };
 		A55DCA9C27DF9DDB002374A6 /* Closures.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55DCA9B27DF9DDB002374A6 /* Closures.swift */; };
 		A55DCA9F27DFD548002374A6 /* PostAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55DCA9E27DFD548002374A6 /* PostAdapter.swift */; };
+		A55DCAA827DFEC5F002374A6 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55DCAA727DFEC5F002374A6 /* PostTableViewCell.swift */; };
+		BF032A449B8B15A6799C1E43 /* Pods_PostSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 071CD8E90DF248F8D390BD33 /* Pods_PostSearch.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		071CD8E90DF248F8D390BD33 /* Pods_PostSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PostSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		35482D39B27AF73A1205D1E4 /* Pods-PostSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostSearch.release.xcconfig"; path = "Target Support Files/Pods-PostSearch/Pods-PostSearch.release.xcconfig"; sourceTree = "<group>"; };
+		6B24A72D1EFDCDBA949602E9 /* Pods-PostSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostSearch.debug.xcconfig"; path = "Target Support Files/Pods-PostSearch/Pods-PostSearch.debug.xcconfig"; sourceTree = "<group>"; };
 		A55DCA6E27DF8500002374A6 /* PostSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PostSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A55DCA7127DF8500002374A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A55DCA7327DF8500002374A6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +44,7 @@
 		A55DCA9927DF9A15002374A6 /* Data+DTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+DTO.swift"; sourceTree = "<group>"; };
 		A55DCA9B27DF9DDB002374A6 /* Closures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Closures.swift; sourceTree = "<group>"; };
 		A55DCA9E27DFD548002374A6 /* PostAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostAdapter.swift; sourceTree = "<group>"; };
+		A55DCAA727DFEC5F002374A6 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +53,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A55DCA8C27DF8C61002374A6 /* Alamofire in Frameworks */,
+				BF032A449B8B15A6799C1E43 /* Pods_PostSearch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +65,8 @@
 			children = (
 				A55DCA7027DF8500002374A6 /* PostSearch */,
 				A55DCA6F27DF8500002374A6 /* Products */,
+				EBD2C92F6D9FA9026342DDA4 /* Pods */,
+				FED0DABA9D3B284FF328DED1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,7 +81,6 @@
 		A55DCA7027DF8500002374A6 /* PostSearch */ = {
 			isa = PBXGroup;
 			children = (
-				A55DCA9D27DFD533002374A6 /* Adapter */,
 				A55DCA7F27DF8502002374A6 /* Info.plist */,
 				A55DCA9727DF99FF002374A6 /* General */,
 				A55DCA8F27DF91F1002374A6 /* Resources */,
@@ -98,6 +106,7 @@
 		A55DCA8627DF8A2C002374A6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A55DCAA027DFE26F002374A6 /* CustomViews */,
 				A55DCA7C27DF8502002374A6 /* LaunchScreen.storyboard */,
 				A55DCA7727DF8501002374A6 /* Main.storyboard */,
 			);
@@ -116,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				A55DCA7527DF8500002374A6 /* PostViewController.swift */,
+				A55DCA9D27DFD533002374A6 /* Adapter */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -170,6 +180,32 @@
 			path = Adapter;
 			sourceTree = "<group>";
 		};
+		A55DCAA027DFE26F002374A6 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				A55DCAA727DFEC5F002374A6 /* PostTableViewCell.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		EBD2C92F6D9FA9026342DDA4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6B24A72D1EFDCDBA949602E9 /* Pods-PostSearch.debug.xcconfig */,
+				35482D39B27AF73A1205D1E4 /* Pods-PostSearch.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FED0DABA9D3B284FF328DED1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				071CD8E90DF248F8D390BD33 /* Pods_PostSearch.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -177,9 +213,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A55DCA8227DF8502002374A6 /* Build configuration list for PBXNativeTarget "PostSearch" */;
 			buildPhases = (
+				B372908525223FDF718892AC /* [CP] Check Pods Manifest.lock */,
 				A55DCA6A27DF8500002374A6 /* Sources */,
 				A55DCA6B27DF8500002374A6 /* Frameworks */,
 				A55DCA6C27DF8500002374A6 /* Resources */,
+				DA5167B1F79F95B1B3D2F7F0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -218,7 +256,7 @@
 			);
 			mainGroup = A55DCA6527DF8500002374A6;
 			packageReferences = (
-				A55DCA8A27DF8C61002374A6 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				A55DCA8A27DF8C61002374A6 /* XCRemoteSwiftPackageReference "Alamofire.git" */,
 			);
 			productRefGroup = A55DCA6F27DF8500002374A6 /* Products */;
 			projectDirPath = "";
@@ -242,11 +280,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B372908525223FDF718892AC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PostSearch-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA5167B1F79F95B1B3D2F7F0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PostSearch/Pods-PostSearch-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PostSearch/Pods-PostSearch-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PostSearch/Pods-PostSearch-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A55DCA6A27DF8500002374A6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A55DCAA827DFEC5F002374A6 /* PostTableViewCell.swift in Sources */,
 				A55DCA9127DF938B002374A6 /* PostPresenter.swift in Sources */,
 				A55DCA9627DF96C4002374A6 /* PostResponse.swift in Sources */,
 				A55DCA9C27DF9DDB002374A6 /* Closures.swift in Sources */,
@@ -400,6 +481,7 @@
 		};
 		A55DCA8327DF8502002374A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B24A72D1EFDCDBA949602E9 /* Pods-PostSearch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -428,6 +510,7 @@
 		};
 		A55DCA8427DF8502002374A6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35482D39B27AF73A1205D1E4 /* Pods-PostSearch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -478,7 +561,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		A55DCA8A27DF8C61002374A6 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+		A55DCA8A27DF8C61002374A6 /* XCRemoteSwiftPackageReference "Alamofire.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
@@ -491,7 +574,7 @@
 /* Begin XCSwiftPackageProductDependency section */
 		A55DCA8B27DF8C61002374A6 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = A55DCA8A27DF8C61002374A6 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			package = A55DCA8A27DF8C61002374A6 /* XCRemoteSwiftPackageReference "Alamofire.git" */;
 			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */

@@ -28,13 +28,9 @@ extension PostAdapter: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cellIdentifier = "cell"
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
         
-        
-        cell.textLabel?.text = self.controller.getArrayPosts[indexPath.row].title
-        
-        return cell
+        let objPost = self.controller.getArrayPosts[indexPath.row]
+        return PostTableViewCell.buildInTableView(tableView, indexPath: indexPath, objPost: objPost)
     }
 }
 
