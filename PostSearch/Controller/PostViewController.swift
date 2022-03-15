@@ -34,6 +34,10 @@ extension PostViewController {
         self.presenter.didLoad()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        self.presenter.prepare(for: segue, sender: sender)
+    }
+    
 }
 
 //MARK: -- Methods
@@ -59,7 +63,7 @@ extension PostViewController {
     }
     
     func didSelectPost(_ objPost: PostResponse.DataResponse) {
-        print("Se selecciono")
+        self.performSegue(withIdentifier: "PostDetailViewController", sender: objPost)
     }
     
     func didPostFilterWithArray(_ arrayFilter: [Any]) {

@@ -27,4 +27,16 @@ struct PostFetch {
     }
     
     
+    func getDetailWithAlamofire(_ idPost: Int, completionHandler: @escaping PostsDetailResponseHandler){
+        
+        let url = "https://gorest.co.in/public/v1/posts/\(idPost)"
+        
+        AF.request(url, method: .get).response { response in
+            response.data?.printLog()
+            guard let objPost = response.data?.toDTO(PostResponse.DataResponse.self) else {
+                return
+            }
+            completionHandler(objPost)
+        }
+    }
 }

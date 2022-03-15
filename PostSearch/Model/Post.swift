@@ -12,19 +12,18 @@ struct Post {
     
     let meta : Meta
     
-    let data : [DataPost]
+    let data : DataPost
     
     struct Meta {
         let pagination : Pagination
     }
     struct Pagination {
         let total, pages, page, limit: Int
-        let links: Links?
+        let links: Links
     }
     struct Links {
         let current, next: String
     }
-    
 }
 
 extension Post {
