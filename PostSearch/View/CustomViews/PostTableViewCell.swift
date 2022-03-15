@@ -30,7 +30,6 @@ extension PostTableViewCell {
             return PostTableViewCell()
         }
         cell.objPost = objPost
-        cell.accessoryType = .detailButton
         return cell
     }
 }

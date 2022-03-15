@@ -22,6 +22,7 @@
 		A55DCA9C27DF9DDB002374A6 /* Closures.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55DCA9B27DF9DDB002374A6 /* Closures.swift */; };
 		A55DCA9F27DFD548002374A6 /* PostAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55DCA9E27DFD548002374A6 /* PostAdapter.swift */; };
 		A55DCAA827DFEC5F002374A6 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55DCAA727DFEC5F002374A6 /* PostTableViewCell.swift */; };
+		A55DCAAB27E005F1002374A6 /* ErrorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55DCAAA27E005F1002374A6 /* ErrorTableViewCell.swift */; };
 		BF032A449B8B15A6799C1E43 /* Pods_PostSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 071CD8E90DF248F8D390BD33 /* Pods_PostSearch.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		A55DCA9B27DF9DDB002374A6 /* Closures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Closures.swift; sourceTree = "<group>"; };
 		A55DCA9E27DFD548002374A6 /* PostAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostAdapter.swift; sourceTree = "<group>"; };
 		A55DCAA727DFEC5F002374A6 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		A55DCAAA27E005F1002374A6 /* ErrorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 		A55DCA9727DF99FF002374A6 /* General */ = {
 			isa = PBXGroup;
 			children = (
+				A55DCAA927E005E2002374A6 /* Error */,
 				A55DCA9827DF9A06002374A6 /* Helpers */,
 			);
 			path = General;
@@ -188,13 +191,20 @@
 			path = CustomViews;
 			sourceTree = "<group>";
 		};
+		A55DCAA927E005E2002374A6 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				A55DCAAA27E005F1002374A6 /* ErrorTableViewCell.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
 		EBD2C92F6D9FA9026342DDA4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				6B24A72D1EFDCDBA949602E9 /* Pods-PostSearch.debug.xcconfig */,
 				35482D39B27AF73A1205D1E4 /* Pods-PostSearch.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -256,7 +266,7 @@
 			);
 			mainGroup = A55DCA6527DF8500002374A6;
 			packageReferences = (
-				A55DCA8A27DF8C61002374A6 /* XCRemoteSwiftPackageReference "Alamofire.git" */,
+				A55DCA8A27DF8C61002374A6 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = A55DCA6F27DF8500002374A6 /* Products */;
 			projectDirPath = "";
@@ -335,6 +345,7 @@
 				A55DCA9327DF9424002374A6 /* PostFetch.swift in Sources */,
 				A55DCA7627DF8500002374A6 /* PostViewController.swift in Sources */,
 				A55DCA7227DF8500002374A6 /* AppDelegate.swift in Sources */,
+				A55DCAAB27E005F1002374A6 /* ErrorTableViewCell.swift in Sources */,
 				A55DCA9A27DF9A15002374A6 /* Data+DTO.swift in Sources */,
 				A55DCA7427DF8500002374A6 /* SceneDelegate.swift in Sources */,
 				A55DCA8927DF8A94002374A6 /* Post.swift in Sources */,
@@ -561,7 +572,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		A55DCA8A27DF8C61002374A6 /* XCRemoteSwiftPackageReference "Alamofire.git" */ = {
+		A55DCA8A27DF8C61002374A6 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
@@ -574,7 +585,7 @@
 /* Begin XCSwiftPackageProductDependency section */
 		A55DCA8B27DF8C61002374A6 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = A55DCA8A27DF8C61002374A6 /* XCRemoteSwiftPackageReference "Alamofire.git" */;
+			package = A55DCA8A27DF8C61002374A6 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */

@@ -6,16 +6,20 @@
 //
 
 import UIKit
-import JGProgressHUD
-import ProgressHUD
 
-class PostViewController: UIViewController {
-    
+class PostViewController: UIViewController, ListPostsViewController {
     
     @IBOutlet weak private var tlbPosts: UITableView!
     lazy private var adapter : PostAdapter = { PostAdapter(controller: self) }()
     lazy private var presenter : PostPresenter = { PostPresenter(controller: self) }()
-    private var arrayPosts = [PostResponse.DataResponse]()
+    
+    lazy var refreshControl: UIRefreshControl = {
+       let refreshControl = UIRefreshControl()
+        refreshControl.tintColor = .blue
+        refreshControl.addTarget(self, action: #selector(self.pullToRefresh), for: .valueChanged)
+        self.tlbPosts.addSubview(refreshControl)
+        return refreshControl
+    }()
     
 }
 
@@ -25,37 +29,32 @@ extension PostViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        ProgressHUD.show()
         self.presenter.didLoad()
-        ProgressHUD.dismiss()
     }
     
-}
-
-//MARK: -- Get Properties
-extension PostViewController {
-    
-    var getTlbPosts: UITableView { self.tlbPosts }
-    var getArrayPosts: [PostResponse.DataResponse] { self.arrayPosts }
 }
 
 //MARK: -- Methods
 extension PostViewController {
     
-    func initAdapter() {
-        self.adapter.initAdapter()
+    @objc private func pullToRefresh() {
+        self.presenter.listAll()
     }
     
-    func reloadData(_ arrayPosts: [PostResponse.DataResponse]){
-        self.arrayPosts = arrayPosts
+    func showLoading(_ isLoading: Bool){
+        isLoading ? self.refreshControl.beginRefreshing() : self.refreshControl.endRefreshing()
+    }
+    
+    func initAdapter() {
+        self.adapter.initAdapterWithTableView(self.tlbPosts)
+    }
+    
+    func reloadData(_ arrayData: [Any]){
+        self.adapter.arrayData = arrayData
         self.tlbPosts.reloadData()
     }
     
-    func loadProgress() {
-        let hud = JGProgressHUD()
-        hud.textLabel.text = "Loading"
-        hud.show(in: self.view)
-        hud.dismiss(afterDelay: 3.0)
+    func didSelectPost(_ objPost: PostResponse.DataResponse) {
+        
     }
 }

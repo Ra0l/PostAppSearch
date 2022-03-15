@@ -18,12 +18,20 @@ struct PostPresenter {
     }
     
     
-    private func listAll() {
+    func listAll() {
         
-        ProgressHUD.show("Cargando")
+        
+        
+        self.controller.showLoading(true)
+        
+//        ProgressHUD.show("Cargando")
         self.postFetch.listAllwWithAlamofire { arrayPostsResponse in
-            self.controller.reloadData(arrayPostsResponse.data ?? [])
-            ProgressHUD.dismiss()
+            
+            self.controller.showLoading(false)
+            let result: [Any] = arrayPostsResponse.data?.count != 0 ? arrayPostsResponse.data ?? [] : ["No se encontraron resultados para esta busqueda"]
+            
+            self.controller.reloadData(result)
+//            ProgressHUD.dismiss()
         }
     }
     

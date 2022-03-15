@@ -22,6 +22,9 @@ struct PostFetch {
                 return
             }
             completionHandler(arrayPosts)
+//            completionHandler(Bool.random() ? arrayPosts : [])
         }
     }
+    
+    
 }
