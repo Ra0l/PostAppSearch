@@ -113,7 +113,7 @@
 		A55DCA8527DF89F6002374A6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A55DCA9527DF96C4002374A6 /* PostResponse.swift */,
+				A5A3F9AF27E127B100CB0031 /* Response */,
 				A5A3F9A627E1257C00CB0031 /* AllPost.swift */,
 				A55DCA8827DF8A94002374A6 /* Post.swift */,
 				A5A3F9A827E126A300CB0031 /* Meta.swift */,
@@ -226,6 +226,14 @@
 				A55DCA9227DF9424002374A6 /* PostFetch.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		A5A3F9AF27E127B100CB0031 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				A55DCA9527DF96C4002374A6 /* PostResponse.swift */,
+			);
+			path = Response;
 			sourceTree = "<group>";
 		};
 		EBD2C92F6D9FA9026342DDA4 /* Pods */ = {
