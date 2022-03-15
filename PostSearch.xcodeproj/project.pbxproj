@@ -23,6 +23,7 @@
 		A55DCA9F27DFD548002374A6 /* PostAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55DCA9E27DFD548002374A6 /* PostAdapter.swift */; };
 		A55DCAA827DFEC5F002374A6 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55DCAA727DFEC5F002374A6 /* PostTableViewCell.swift */; };
 		A55DCAAB27E005F1002374A6 /* ErrorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55DCAAA27E005F1002374A6 /* ErrorTableViewCell.swift */; };
+		A55DCAAD27E010FC002374A6 /* PostFilterAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55DCAAC27E010FC002374A6 /* PostFilterAdapter.swift */; };
 		BF032A449B8B15A6799C1E43 /* Pods_PostSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 071CD8E90DF248F8D390BD33 /* Pods_PostSearch.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,7 @@
 		A55DCA9E27DFD548002374A6 /* PostAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostAdapter.swift; sourceTree = "<group>"; };
 		A55DCAA727DFEC5F002374A6 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		A55DCAAA27E005F1002374A6 /* ErrorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTableViewCell.swift; sourceTree = "<group>"; };
+		A55DCAAC27E010FC002374A6 /* PostFilterAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostFilterAdapter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				A55DCA9E27DFD548002374A6 /* PostAdapter.swift */,
+				A55DCAAC27E010FC002374A6 /* PostFilterAdapter.swift */,
 			);
 			path = Adapter;
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 				A55DCA7227DF8500002374A6 /* AppDelegate.swift in Sources */,
 				A55DCAAB27E005F1002374A6 /* ErrorTableViewCell.swift in Sources */,
 				A55DCA9A27DF9A15002374A6 /* Data+DTO.swift in Sources */,
+				A55DCAAD27E010FC002374A6 /* PostFilterAdapter.swift in Sources */,
 				A55DCA7427DF8500002374A6 /* SceneDelegate.swift in Sources */,
 				A55DCA8927DF8A94002374A6 /* Post.swift in Sources */,
 			);

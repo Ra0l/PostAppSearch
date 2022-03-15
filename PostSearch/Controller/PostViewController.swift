@@ -7,10 +7,12 @@
 
 import UIKit
 
-class PostViewController: UIViewController, ListPostsViewController {
+class PostViewController: UIViewController, ListPostsViewController, PostFilterViewController {
     
     @IBOutlet weak private var tlbPosts: UITableView!
-    lazy private var adapter : PostAdapter = { PostAdapter(controller: self) }()
+    @IBOutlet weak private var searchPost : UISearchBar!
+    lazy private var listPostAdapter : PostAdapter = { PostAdapter(controller: self) }()
+    lazy private var filterPostAdapter : PostFilterAdapter = { PostFilterAdapter(controller: self) }()
     lazy private var presenter : PostPresenter = { PostPresenter(controller: self) }()
     
     lazy var refreshControl: UIRefreshControl = {
@@ -45,16 +47,23 @@ extension PostViewController {
         isLoading ? self.refreshControl.beginRefreshing() : self.refreshControl.endRefreshing()
     }
     
-    func initAdapter() {
-        self.adapter.initAdapterWithTableView(self.tlbPosts)
+    func initAdapters() {
+        self.listPostAdapter.initAdapterWithTableView(self.tlbPosts)
+        self.filterPostAdapter.initAdapterWithSearchBar(self.searchPost)
     }
     
     func reloadData(_ arrayData: [Any]){
-        self.adapter.arrayData = arrayData
+        self.filterPostAdapter.arrayPosts = arrayData as? [PostResponse.DataResponse] ?? []
+        self.listPostAdapter.arrayData = arrayData
         self.tlbPosts.reloadData()
     }
     
     func didSelectPost(_ objPost: PostResponse.DataResponse) {
-        
+        print("Se selecciono")
+    }
+    
+    func didPostFilterWithArray(_ arrayFilter: [Any]) {
+        self.listPostAdapter.arrayData = arrayFilter
+        self.tlbPosts.reloadData()
     }
 }

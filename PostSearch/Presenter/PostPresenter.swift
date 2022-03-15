@@ -37,7 +37,7 @@ struct PostPresenter {
     
     func didLoad() {
         
-        self.controller.initAdapter()
+        self.controller.initAdapters()
         self.listAll()
     }
 }
