@@ -33,12 +33,8 @@ extension PostDetailViewController {
 //MARK: -- Methods
 extension PostDetailViewController {
     
-    @IBAction func clickBtnBack(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
-    }
-    
     func setInformation(_ objPost: PostResponse.DataResponse) {
         self.lblTitle.text = objPost.title
-//        self.lblBody.text = objPost.body
+        self.lblBody.text = objPost.body
     }
 }

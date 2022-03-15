@@ -25,6 +25,7 @@ struct PostDetailPresenter {
             
             guard let objPost = objPost else {
                 print("El detalle del elemento no se encuentra!")
+                self.controller.showAutomaticAlertWithTitle("Error", message: "El detalle del elemento no se encuentra")
                 return
             }
             self.controller.setInformation(objPost)
