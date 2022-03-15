@@ -27,9 +27,10 @@ struct PostDetailPresenter {
                 print("El detalle del elemento no se encuentra!")
                 return
             }
-            
             self.controller.setInformation(objPost)
-            print(objPost.title)
+            print(objPost)
+            print("Title:", objPost.title)
+            print("Body", objPost.body)
         }
     }
 }

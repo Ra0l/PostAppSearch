@@ -21,6 +21,7 @@ class PostTableViewCell: UITableViewCell {
     }
 }
 
+//MARK: -- Builder
 extension PostTableViewCell {
     
     class func buildInTableView(_ tableView: UITableView, indexPath: IndexPath, objPost: PostResponse.DataResponse) -> PostTableViewCell {

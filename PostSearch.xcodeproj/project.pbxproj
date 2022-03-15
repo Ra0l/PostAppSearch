@@ -26,6 +26,10 @@
 		A55DCAAD27E010FC002374A6 /* PostFilterAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55DCAAC27E010FC002374A6 /* PostFilterAdapter.swift */; };
 		A55DCAB027E0265B002374A6 /* PostDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55DCAAF27E0265B002374A6 /* PostDetailPresenter.swift */; };
 		A55DCAB227E02679002374A6 /* PostDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55DCAB127E02679002374A6 /* PostDetailViewController.swift */; };
+		A5A3F9A727E1257C00CB0031 /* AllPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A3F9A627E1257C00CB0031 /* AllPost.swift */; };
+		A5A3F9A927E126A300CB0031 /* Meta.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A3F9A827E126A300CB0031 /* Meta.swift */; };
+		A5A3F9AB27E126B600CB0031 /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A3F9AA27E126B600CB0031 /* Pagination.swift */; };
+		A5A3F9AD27E126D400CB0031 /* Links.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A3F9AC27E126D400CB0031 /* Links.swift */; };
 		BF032A449B8B15A6799C1E43 /* Pods_PostSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 071CD8E90DF248F8D390BD33 /* Pods_PostSearch.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +57,10 @@
 		A55DCAAC27E010FC002374A6 /* PostFilterAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostFilterAdapter.swift; sourceTree = "<group>"; };
 		A55DCAAF27E0265B002374A6 /* PostDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailPresenter.swift; sourceTree = "<group>"; };
 		A55DCAB127E02679002374A6 /* PostDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewController.swift; sourceTree = "<group>"; };
+		A5A3F9A627E1257C00CB0031 /* AllPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPost.swift; sourceTree = "<group>"; };
+		A5A3F9A827E126A300CB0031 /* Meta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meta.swift; sourceTree = "<group>"; };
+		A5A3F9AA27E126B600CB0031 /* Pagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
+		A5A3F9AC27E126D400CB0031 /* Links.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Links.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +105,7 @@
 				A55DCA8727DF8A3D002374A6 /* Presenter */,
 				A55DCA8627DF8A2C002374A6 /* View */,
 				A55DCA8527DF89F6002374A6 /* Model */,
+				A5A3F9AE27E1271900CB0031 /* Networking */,
 			);
 			path = PostSearch;
 			sourceTree = "<group>";
@@ -105,8 +114,11 @@
 			isa = PBXGroup;
 			children = (
 				A55DCA9527DF96C4002374A6 /* PostResponse.swift */,
+				A5A3F9A627E1257C00CB0031 /* AllPost.swift */,
 				A55DCA8827DF8A94002374A6 /* Post.swift */,
-				A55DCA9227DF9424002374A6 /* PostFetch.swift */,
+				A5A3F9A827E126A300CB0031 /* Meta.swift */,
+				A5A3F9AA27E126B600CB0031 /* Pagination.swift */,
+				A5A3F9AC27E126D400CB0031 /* Links.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -133,8 +145,8 @@
 		A55DCA8D27DF91B4002374A6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				A55DCAAE27E02644002374A6 /* Detail */,
 				A55DCA7527DF8500002374A6 /* PostViewController.swift */,
+				A55DCAAE27E02644002374A6 /* Detail */,
 				A55DCA9D27DFD533002374A6 /* Adapter */,
 			);
 			path = Controller;
@@ -206,6 +218,14 @@
 				A55DCAB127E02679002374A6 /* PostDetailViewController.swift */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		A5A3F9AE27E1271900CB0031 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				A55DCA9227DF9424002374A6 /* PostFetch.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		EBD2C92F6D9FA9026342DDA4 /* Pods */ = {
@@ -353,12 +373,16 @@
 				A55DCA9F27DFD548002374A6 /* PostAdapter.swift in Sources */,
 				A55DCA9327DF9424002374A6 /* PostFetch.swift in Sources */,
 				A55DCA7627DF8500002374A6 /* PostViewController.swift in Sources */,
+				A5A3F9A727E1257C00CB0031 /* AllPost.swift in Sources */,
 				A55DCAB227E02679002374A6 /* PostDetailViewController.swift in Sources */,
+				A5A3F9A927E126A300CB0031 /* Meta.swift in Sources */,
 				A55DCAB027E0265B002374A6 /* PostDetailPresenter.swift in Sources */,
 				A55DCA7227DF8500002374A6 /* AppDelegate.swift in Sources */,
 				A55DCAAB27E005F1002374A6 /* ErrorTableViewCell.swift in Sources */,
 				A55DCA9A27DF9A15002374A6 /* Data+DTO.swift in Sources */,
 				A55DCAAD27E010FC002374A6 /* PostFilterAdapter.swift in Sources */,
+				A5A3F9AB27E126B600CB0031 /* Pagination.swift in Sources */,
+				A5A3F9AD27E126D400CB0031 /* Links.swift in Sources */,
 				A55DCA7427DF8500002374A6 /* SceneDelegate.swift in Sources */,
 				A55DCA8927DF8A94002374A6 /* Post.swift in Sources */,
 			);
