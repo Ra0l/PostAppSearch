@@ -101,7 +101,6 @@
 				A55DCA9727DF99FF002374A6 /* General */,
 				A55DCA8F27DF91F1002374A6 /* Resources */,
 				A55DCA8E27DF91C8002374A6 /* App */,
-				A55DCA8D27DF91B4002374A6 /* Controller */,
 				A55DCA8727DF8A3D002374A6 /* Presenter */,
 				A55DCA8627DF8A2C002374A6 /* View */,
 				A55DCA8527DF89F6002374A6 /* Model */,
@@ -126,6 +125,7 @@
 		A55DCA8627DF8A2C002374A6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A55DCA8D27DF91B4002374A6 /* Controller */,
 				A55DCAA027DFE26F002374A6 /* CustomViews */,
 				A55DCA7C27DF8502002374A6 /* LaunchScreen.storyboard */,
 				A55DCA7727DF8501002374A6 /* Main.storyboard */,

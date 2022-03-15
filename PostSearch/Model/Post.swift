@@ -15,10 +15,4 @@ struct Post: Decodable {
     let title : String
     let body : String
     
-    init(response : PostResponse.DataResponse){
-        self.id = response.id ?? 0
-        self.user_id = response.user_id ?? 0
-        self.title = response.title ?? ""
-        self.body = response.body ?? ""
-    }
 }
