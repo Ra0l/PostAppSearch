@@ -31,6 +31,7 @@
 		A5A3F9AB27E126B600CB0031 /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A3F9AA27E126B600CB0031 /* Pagination.swift */; };
 		A5A3F9AD27E126D400CB0031 /* Links.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A3F9AC27E126D400CB0031 /* Links.swift */; };
 		A5A3F9B227E133FA00CB0031 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A3F9B127E133FA00CB0031 /* AlertManager.swift */; };
+		A5A3F9BE27E15BF800CB0031 /* DataDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A3F9BD27E15BF800CB0031 /* DataDetailResponse.swift */; };
 		BF032A449B8B15A6799C1E43 /* Pods_PostSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 071CD8E90DF248F8D390BD33 /* Pods_PostSearch.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +64,7 @@
 		A5A3F9AA27E126B600CB0031 /* Pagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
 		A5A3F9AC27E126D400CB0031 /* Links.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Links.swift; sourceTree = "<group>"; };
 		A5A3F9B127E133FA00CB0031 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
+		A5A3F9BD27E15BF800CB0031 /* DataDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDetailResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				A55DCA9527DF96C4002374A6 /* PostResponse.swift */,
+				A5A3F9BD27E15BF800CB0031 /* DataDetailResponse.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -387,6 +390,7 @@
 				A5A3F9A727E1257C00CB0031 /* AllPost.swift in Sources */,
 				A55DCAB227E02679002374A6 /* PostDetailViewController.swift in Sources */,
 				A5A3F9A927E126A300CB0031 /* Meta.swift in Sources */,
+				A5A3F9BE27E15BF800CB0031 /* DataDetailResponse.swift in Sources */,
 				A55DCAB027E0265B002374A6 /* PostDetailPresenter.swift in Sources */,
 				A55DCA7227DF8500002374A6 /* AppDelegate.swift in Sources */,
 				A5A3F9B227E133FA00CB0031 /* AlertManager.swift in Sources */,

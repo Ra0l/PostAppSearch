@@ -8,5 +8,5 @@
 import Foundation
 
 typealias ErrorHandler = (_ error: String) -> Void
-typealias PostsResponseHandler = (_ arrayPosts: PostResponse) -> Void
-typealias PostsDetailResponseHandler = (_ objPost: PostResponse.DataResponse?) -> Void
+typealias PostsResponseHandler = (_ objectsPosts: PostResponse) -> Void 
+typealias PostsDetailResponseHandler = (_ objPost: PostResponseDetail?) -> Void

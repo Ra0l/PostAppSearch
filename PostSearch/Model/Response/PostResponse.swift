@@ -31,3 +31,10 @@ struct PostResponse: Decodable {
         let body : String?
     }
 }
+
+//MARK: -- Es un objeto
+struct PostResponseDetail: Decodable{
+    let meta : Meta?
+    let data : DataDetailResponse?
+    
+}

@@ -33,8 +33,8 @@ extension PostDetailViewController {
 //MARK: -- Methods
 extension PostDetailViewController {
     
-    func setInformation(_ objPost: PostResponse.DataResponse) {
-        self.lblTitle.text = objPost.title
-        self.lblBody.text = objPost.body
+    func setInformation(_ objPost: PostResponseDetail) {
+        self.lblTitle.text = objPost.data?.title
+        self.lblBody.text = objPost.data?.body
     }
 }

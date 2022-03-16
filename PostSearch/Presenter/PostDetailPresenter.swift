@@ -30,8 +30,9 @@ struct PostDetailPresenter {
             }
             self.controller.setInformation(objPost)
             print(objPost)
-            print("Title:", objPost.title)
-            print("Body", objPost.body)
+//            print("Title:", objPost.title)
+//            print("Body", objPost.body)
+            
         }
     }
 }

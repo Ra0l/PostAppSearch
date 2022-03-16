@@ -33,10 +33,13 @@ struct PostFetch {
         
         AF.request(url, method: .get).response { response in
             response.data?.printLog()
-            guard let objPost = response.data?.toDTO(PostResponse.DataResponse.self) else {
+            guard let objPost = response.data?.toDTO(PostResponseDetail.self) else {
+                completionHandler(nil)
+                //Una logica de errores
                 return
             }
             completionHandler(objPost)
+            print(objPost)
         }
     }
 }
