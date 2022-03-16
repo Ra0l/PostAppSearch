@@ -30,10 +30,12 @@ class PostFilterAdapter: NSObject {
 extension PostFilterAdapter: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        
+        //arrayResult si no hay texto enviara un self.arrayPosts , de lo contrario  mnadare un filtrado
         let arrayResult = searchText.count == 0 ? self.arrayPosts : self.arrayPosts.filter { objPost in objPost.title!.contains(searchText) }
+                                                                    //Su es que hay texto filtro
         
         let arrayToShow: [Any] = arrayResult.count != 0 ? arrayResult : ["No se encontro resultados de: \n \(searchText)"]
+        
         self.controller?.didPostFilterWithArray(arrayToShow)
     }
 }
