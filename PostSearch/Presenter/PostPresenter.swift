@@ -23,7 +23,7 @@ struct PostPresenter {
         
         self.controller?.showLoading(true)
         
-        ProgressHUD.show("Cargando")
+        ProgressHUD.show("Loading")
         self.postFetch.listAllwWithAlamofire { arrayPostsResponse in
             
             self.controller?.showLoading(false)

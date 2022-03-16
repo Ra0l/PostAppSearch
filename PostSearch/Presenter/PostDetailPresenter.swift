@@ -23,7 +23,7 @@ struct PostDetailPresenter {
     
     func getDetail(){
         
-        ProgressHUD.show("Cargando")
+        ProgressHUD.show("Loading detail")
         self.postFetch.getDetailWithAlamofire(self.controller.idDPost) { objPost in
             
             guard let objPost = objPost else {
