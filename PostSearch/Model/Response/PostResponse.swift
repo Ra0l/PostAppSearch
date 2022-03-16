@@ -9,9 +9,8 @@ import Foundation
 
 struct PostResponse: Decodable {
     
+    //MARK: -- Meta
     let meta : Meta?
-    
-    let data : [DataResponse]?
     
     struct Meta : Decodable {
         let pagination : Pagination?
@@ -24,6 +23,10 @@ struct PostResponse: Decodable {
         let current, next: String
     }
     
+    
+    //MARK: -- Data
+    let data : [DataResponse]?
+    
     struct DataResponse: Decodable {
         let id : Int?
         let user_id : Int?
@@ -32,9 +35,4 @@ struct PostResponse: Decodable {
     }
 }
 
-//MARK: -- Es un objeto
-struct PostResponseDetail: Decodable{
-    let meta : Meta?
-    let data : DataDetailResponse?
-    
-}
+

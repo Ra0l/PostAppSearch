@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import ProgressHUD
 
 struct PostDetailPresenter {
     
@@ -21,6 +22,8 @@ struct PostDetailPresenter {
     }
     
     func getDetail(){
+        
+        ProgressHUD.show("Cargando")
         self.postFetch.getDetailWithAlamofire(self.controller.idDPost) { objPost in
             
             guard let objPost = objPost else {
@@ -29,6 +32,7 @@ struct PostDetailPresenter {
                 return
             }
             self.controller.setInformation(objPost)
+            ProgressHUD.dismiss()
             print(objPost)
 //            print("Title:", objPost.title)
 //            print("Body", objPost.body)
