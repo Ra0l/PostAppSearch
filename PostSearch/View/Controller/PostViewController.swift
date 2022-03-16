@@ -11,12 +11,12 @@ class PostViewController: UIViewController, ListPostsViewController, PostFilterV
     
     @IBOutlet weak private var tlbPosts: UITableView!
     @IBOutlet weak private var searchPost : UISearchBar!
-    lazy private var listPostAdapter : PostAdapter = { PostAdapter(controller: self) }()
+    lazy private var listPostAdapter   : PostAdapter       = { PostAdapter(controller: self) }()
     lazy private var filterPostAdapter : PostFilterAdapter = { PostFilterAdapter(controller: self) }()
-    lazy private var presenter : PostPresenter = { PostPresenter(controller: self) }()
+    lazy private var presenter         : PostPresenter     = { PostPresenter(controller: self) }()
     
     lazy var refreshControl: UIRefreshControl = {
-       let refreshControl = UIRefreshControl()
+        let refreshControl = UIRefreshControl()
         refreshControl.tintColor = .blue
         refreshControl.addTarget(self, action: #selector(self.pullToRefresh), for: .valueChanged)
         self.tlbPosts.addSubview(refreshControl)

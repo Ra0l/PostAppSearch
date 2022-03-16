@@ -14,7 +14,7 @@ protocol PostFilterViewController: NSObjectProtocol {
 
 class PostFilterAdapter: NSObject {
     
-    private unowned let controller : PostFilterViewController
+    private weak var controller : PostFilterViewController?
     
     var arrayPosts = [PostResponse.DataResponse]()
     
@@ -34,6 +34,6 @@ extension PostFilterAdapter: UISearchBarDelegate {
         let arrayResult = searchText.count == 0 ? self.arrayPosts : self.arrayPosts.filter { objPost in objPost.title!.contains(searchText) }
         
         let arrayToShow: [Any] = arrayResult.count != 0 ? arrayResult : ["No se encontro resultados de: \n \(searchText)"]
-        self.controller.didPostFilterWithArray(arrayToShow)
+        self.controller?.didPostFilterWithArray(arrayToShow)
     }
 }

@@ -23,6 +23,7 @@ struct PostFetch {
             }
             completionHandler(arrayPosts)
 //            completionHandler(Bool.random() ? arrayPosts : [])
+            print(arrayPosts)
         }
     }
     
@@ -35,7 +36,7 @@ struct PostFetch {
             response.data?.printLog()
             guard let objPost = response.data?.toDTO(PostResponseDetail.self) else {
                 completionHandler(nil)
-                //Una logica de errores
+                //Una logica para el erro si no devuelve lana 
                 return
             }
             completionHandler(objPost)

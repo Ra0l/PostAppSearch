@@ -15,7 +15,8 @@ class PostTableViewCell: UITableViewCell {
     fileprivate var objPost: PostResponse.DataResponse! {
         didSet { self.updateData() }
     }
-   
+    
+    //Actualizar la data
     func updateData() {
         self.lblTitle.text = self.objPost.title
     }
